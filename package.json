@@ -1,0 +1,49 @@
+{
+    "name": "roflan-calc",
+    "version": "1.0.0",
+    "description": "Oof!",
+    "unpkg": "dist/roflan-calc.js",
+    "main": "dist/roflan-calc.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/roflan-calc.js",
+        "dist/index.d.ts"
+    ],
+    "scripts": {
+        "ts:dev": "ts-node-dev --respawn --transpile-only test/dev.ts",
+        "webpack:dev": "cross-env NODE_ENV=development webpack-dev-server --config-name main --host localhost --watch-poll",
+        "webpack:build": "cross-env NODE_ENV=production webpack --progress"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/crashmax-off/roflan-calc.git"
+    },
+    "keywords": [
+        "count"
+    ],
+    "author": {
+        "name": "Vitalij Ryndin",
+        "email": "sys@crashmax.ru",
+        "url": "https://crashmax.ru"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/crashmax-off/roflan-calc/issues"
+    },
+    "homepage": "https://github.com/crashmax-off/roflan-calc",
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@types/webpack": "^4.41.22",
+        "@types/webpack-dev-server": "^3.11.0",
+        "babel-loader": "^8.2.2",
+        "clean-webpack-plugin": "^3.0.0",
+        "cross-env": "^7.0.3",
+        "ts-loader": "^8.0.14",
+        "ts-node-dev": "^1.1.1",
+        "typescript": "^4.1.3",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
