@@ -14,7 +14,17 @@ export class RoflanCalc {
         return this.chunk(this.rp(x), this.lg(this.rp(y)))
     }
 
-    private rp(num: number) {
+    multiply(x: number, y: number): number {
+        let sum: number = x
+
+        for (let i = 0; i < y - 1; i++) {
+            sum += x
+        }
+
+        return sum
+    }
+
+    private rp(num: number): string {
         return ' '.repeat(num)
     }
 
@@ -23,15 +33,12 @@ export class RoflanCalc {
     }
 
     private chunk(str: string, lg: number): number {
-        let padString: string[] = []
-        let pad = str.padEnd(Math.ceil(this.lg(str) / lg) * lg, ' ')
+        let strings: string[] = []
 
-        for (let i = 0; i < pad.length / lg; i++) {
-            padString.push(pad.substring(i * lg, (i + 1) * lg))
+        for (let i = 0; i < str.length / lg; i++) {
+            strings.push(str.substring(i * lg, (i + 1) * lg))
         }
 
-        // console.log(`Chunk (divide): ${JSON.stringify(padString)}`)
-
-        return this.lg(padString)
+        return this.lg(strings)
     }
 }
