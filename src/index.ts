@@ -15,13 +15,23 @@ export class RoflanCalc {
     }
 
     multiply(x: number, y: number): number {
-        let sum: number = x
+        let result = x
 
         for (let i = 0; i < y - 1; i++) {
-            sum += x
+            result += x
         }
 
-        return sum
+        return result
+    }
+
+    pow(x: number, y: number): number {
+        let result = 1
+
+        for (let i = 0; i < y; i++) {
+            result *= x
+        }
+
+        return result
     }
 
     private rp(num: number): string {

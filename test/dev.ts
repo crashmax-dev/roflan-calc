@@ -7,4 +7,5 @@ import { RoflanCalc } from '../src/index'
     console.log(`Minus: ${calc.minus(6, 3)}`)
     console.log(`Divide: ${calc.divide(16, 4)}`)
     console.log(`Multiply: ${calc.multiply(5, 5)}`)
+    console.log(`Pow: ${calc.pow(7, 2)}`)
 })()
